@@ -16,9 +16,9 @@ export default function VideoMarquee() {
   const items = [...VIDEO_IMAGES, ...VIDEO_IMAGES, ...VIDEO_IMAGES];
 
   return (
-    <div className="w-full relative py-6 overflow-hidden select-none">
+    <div className="w-full relative py-6 overflow-x-auto sm:overflow-hidden select-none touch-pan-x scrollbar-none">
       {/* Background Soft Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-rose-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-amber-900/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Continuous Marquee Track */}
       <div className="flex w-max items-center animate-video-marquee">
@@ -49,6 +49,11 @@ export default function VideoMarquee() {
         }
         .animate-video-marquee {
           animation: videoMarquee 35s linear infinite;
+        }
+        .animate-video-marquee:hover,
+        .animate-video-marquee:active,
+        .animate-video-marquee:focus {
+          animation-play-state: paused;
         }
       `}</style>
     </div>
