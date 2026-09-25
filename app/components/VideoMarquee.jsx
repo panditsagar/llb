@@ -25,7 +25,7 @@ export default function VideoMarquee() {
         {items.map((item, index) => (
           <div
             key={`${item.id}-${index}`}
-            className="relative mx-1 w-[210px] h-[360px] rounded-2xl overflow-hidden  shrink-0"
+            className="relative mx-1 w-[165px] h-[285px] sm:w-[210px] sm:h-[360px] rounded-2xl overflow-hidden shrink-0"
           >
             {/* Background Image from Public Folder */}
             <img
