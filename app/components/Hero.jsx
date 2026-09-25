@@ -19,8 +19,8 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Top Target Audience Pill Badge with Dotted Border */}
-        <div className=" w-fit mx-auto p-1 rounded-full border-2 border-dotted border-[#36281E]/30 mb-8">
-          <div className="flex items-center justify-center gap-2 py-3 px-12 bg-[#EFE7DC] rounded-full text-[#36281E] text-center">
+        <div className=" w-fit mx-auto p-1 rounded-full border-2 border-dotted border-[#36281E] mb-8">
+          <div className="flex items-center justify-center gap-2 py-2 px-12 bg-[#EFE7DC] rounded-full text-[#36281E] text-center">
             <span className="text-[0.8rem] sm:text-[0.89rem] font-semibold tracking-wide">
               For Agencies, Videographers, Social Media Managers, Coaches & Content Teams
             </span>
