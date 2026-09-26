@@ -28,23 +28,16 @@ export default function ProcessSection() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-5  my-2 sm:my-4 relative">
           {/* LEFT CARD: RAW FOOTAGE PHONE FRAME */}
           <div className="relative group shrink-0">
-             
-
             {/* Tilted Phone Frame (-rotate-3) */}
-            <div className="w-56 sm:w-64 lg:w-72 bg-white rounded-[2rem] p-2 shadow-xl shadow-stone-900/10 border border-stone-200/80 -rotate-3 hover:rotate-0 transition-transform duration-500">
-              <div className="relative aspect-[9/16] rounded-[1.5rem] overflow-hidden bg-stone-900">
+            <div className="w-56 sm:w-64 lg:w-72 bg-black rounded-[2rem] p-2 shadow-xl shadow-stone-900/10  -rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div className="relative aspect-[9/16] rounded-[1.8rem] overflow-hidden bg-stone-900">
                 <img
                   src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
                   alt="Raw Footage Creator"
                   className="w-full h-full object-cover grayscale-[20%] brightness-95"
                 />
-
-                {/* Top Badge: Raw Footage */}
-                <div className="absolute top-3.5 left-3.5 z-10">
-                  <span className="px-3 py-1 bg-black/60   text-white text-[0.7rem] sm:text-xs font-semibold rounded-full tracking-wide">
-                    Raw Footage
-                  </span>
-                </div>
+                {/* Dynamic Island / Notch */}
+                <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 sm:w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 border border-white/10 shadow-sm pointer-events-none"></div>
 
                 {/* Bottom Video Controls Overlay */}
                 <div className="absolute bottom-3 left-3 right-3 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-2 rounded-xl text-white">
@@ -171,13 +164,13 @@ export default function ProcessSection() {
             {/* Bottom 3 Pills (Edit, Quality Check, Revisions) */}
             <div className="flex flex-wrap items-center justify-center gap-2">
               <div className="flex items-center gap-1.5 px-3 py-1 bg-[#FAF0E4] text-[#7A5B3E] rounded-md text-[0.7rem] sm:text-xs font-semibold  ">
-                  Edit
+                Edit
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1 bg-[#FAF0E4] text-[#7A5B3E] rounded-md text-[0.7rem] sm:text-xs font-semibold  ">
-                 Quality Check
+                Quality Check
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1 bg-[#FAF0E4] text-[#7A5B3E] rounded-md text-[0.7rem] sm:text-xs font-semibold  ">
-                  Revisions
+                Revisions
               </div>
             </div>
           </div>
@@ -204,23 +197,16 @@ export default function ProcessSection() {
 
           {/* RIGHT CARD: FINAL LBB EDIT PHONE FRAME */}
           <div className="relative group shrink-0">
-         
-
             {/* Tilted Phone Frame with Gold Border (rotate-3) */}
-            <div className="w-56 sm:w-64 lg:w-72 bg-white rounded-[2rem] p-2 shadow-xl shadow-amber-900/10 border-2 border-[#D97706]/40 rotate-3 hover:rotate-0 transition-transform duration-500">
-              <div className="relative aspect-[9/16] rounded-[1.5rem] overflow-hidden bg-stone-900">
+            <div className="w-56 sm:w-64 lg:w-72 bg-black rounded-[2rem] p-2 shadow-xl shadow-amber-900/10  rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div className="relative aspect-[9/16] rounded-[1.8rem] overflow-hidden bg-stone-900">
                 <img
                   src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80"
                   alt="Final LBB Edit Creator"
                   className="w-full h-full object-cover contrast-[105%] saturate-[110%]"
                 />
-
-                {/* Top Badge: Final LBB Edit */}
-                <div className="absolute top-3.5 left-3.5 z-10">
-                  <span className="px-3 py-1 bg-white/95   text-[#36281E] text-[0.7rem] sm:text-xs font-bold rounded-full shadow-sm tracking-wide">
-                    Final LBB Edit
-                  </span>
-                </div>
+                {/* Dynamic Island / Notch */}
+                <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 sm:w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 border border-white/10 shadow-sm pointer-events-none"></div>
 
                 {/* Bottom Video Controls Overlay */}
                 <div className="absolute bottom-3 left-3 right-3 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-2 rounded-xl text-white">
