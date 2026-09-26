@@ -65,7 +65,7 @@ export default function ProblemSection() {
           {painPoints.map((point, index) => (
             <div
               key={index}
-              className="relative p-7 sm:p-6 bg-[#F5EFE6]  rounded-xl min-h-[340px] flex flex-col justify-between  "
+              className="relative p-7 sm:p-6 bg-[#ffffff]/80  rounded-xl min-h-[340px] flex flex-col justify-between  "
             >
               <div>
                 {/* Title with Pastel BG */}
