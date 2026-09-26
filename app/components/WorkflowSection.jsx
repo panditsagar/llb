@@ -73,7 +73,7 @@ export default function WorkflowSection() {
                 <h3 className="text-xl sm:text-2xl font-bold text-[#2D231E] font-heading mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm sm:text-base text-[#574940] leading-relaxed">
+                <p className="text-sm sm:text-base text-[#574940]  ">
                   {item.description}
                 </p>
               </div>
