@@ -14,7 +14,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#FAF7F2] text-[#2D231E] pt-4 sm:pt-8 pb-20 md:pb-28">
+    <section className="relative overflow-hidden bg-[#FAF7F2] text-[#2D231E] pt-4 sm:pt-8 ">
       {/* Soft Ambient Warm Glows matching reference design */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#F3ECE0]/70 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-[300px] h-[300px] bg-[#EFE5D5]/50 rounded-full blur-3xl pointer-events-none" />

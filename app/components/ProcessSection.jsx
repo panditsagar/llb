@@ -41,7 +41,7 @@ export default function ProcessSection() {
 
                 {/* Top Badge: Raw Footage */}
                 <div className="absolute top-3.5 left-3.5 z-10">
-                  <span className="px-3 py-1 bg-black/60 backdrop-blur-sm text-white text-[0.7rem] sm:text-xs font-semibold rounded-full tracking-wide">
+                  <span className="px-3 py-1 bg-black/60   text-white text-[0.7rem] sm:text-xs font-semibold rounded-full tracking-wide">
                     Raw Footage
                   </span>
                 </div>
@@ -83,9 +83,9 @@ export default function ProcessSection() {
           </div>
 
           {/* CENTER CARD: LBB EDITING (BEHIND THE SCENES) */}
-          <div className="w-full max-w-sm sm:max-w-md lg:max-w-[420px] bg-[#FAF6F0] rounded-2xl p-5 sm:p-6 shadow-lg shadow-stone-900/5 border border-[#EBE3D5] z-10">
+          <div className="w-full max-w-sm sm:max-w-md lg:max-w-[420px] bg-[#FAF6F0] rounded-2xl p-4   border border-[#EBE3D5] z-10">
             {/* Header */}
-            <div className="flex items-center justify-between mb-4 sm:mb-5">
+            <div className="flex items-center justify-between mb-3  ">
               <h3 className="text-xl  font-semibold text-[#2D231E]">
                 LBB Editing
               </h3>
@@ -96,7 +96,7 @@ export default function ProcessSection() {
             </div>
 
             {/* Interactive Animated Editing Timeline Container */}
-            <div className="bg-[#FAF7F2] rounded-xl p-3.5 sm:p-4 border border-[#E8DFC9] mb-4 sm:mb-5 relative overflow-hidden">
+            <div className="bg-[#FAF7F2] rounded-xl p-3  border border-[#E8DFC9] mb-3   relative  ">
               {/* Animated Playhead Line */}
               <div className="absolute top-0 bottom-0 w-0.5 bg-[#2D231E] z-20 pointer-events-none animate-[slidePlayhead_4s_ease-in-out_infinite]">
                 <div className="w-2.5 h-2.5 rounded-full bg-[#2D231E] -ml-[4px] -mt-0.5 shadow-xs" />
@@ -217,7 +217,7 @@ export default function ProcessSection() {
 
                 {/* Top Badge: Final LBB Edit */}
                 <div className="absolute top-3.5 left-3.5 z-10">
-                  <span className="px-3 py-1 bg-white/95 backdrop-blur-sm text-[#36281E] text-[0.7rem] sm:text-xs font-serif font-bold rounded-full shadow-sm tracking-wide">
+                  <span className="px-3 py-1 bg-white/95   text-[#36281E] text-[0.7rem] sm:text-xs font-bold rounded-full shadow-sm tracking-wide">
                     Final LBB Edit
                   </span>
                 </div>
