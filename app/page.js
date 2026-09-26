@@ -5,6 +5,7 @@ import WorkflowSection from "./components/WorkflowSection";
 import TestimonialSection from "./components/TestimonialSection";
 import CapabilitiesSection from "./components/CapabilitiesSection";
 import RepeatableWorkflowSection from "./components/RepeatableWorkflowSection";
+import PricingSection from "./components/PricingSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WorkflowSection />
       <CapabilitiesSection />
       <RepeatableWorkflowSection />
+      <PricingSection />
     </main>
   );
 }
