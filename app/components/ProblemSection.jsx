@@ -39,14 +39,7 @@ export default function ProblemSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-[#F3ECE0]/50 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Top Section Eyebrow Badge */}
-        <div className="w-fit   sm:max-w-none mx-auto p-1 rounded-full border-2 border-dotted border-[#36281E]/40 mb-6 shadow-xs">
-          <div className="flex items-center justify-center gap-2 py-2 px-6 sm:px-8 bg-[#36281E] rounded-full text-[#FAF7F2] text-center">
-            <span className="text-[0.75rem] sm:text-xs md:text-sm font-semibold tracking-wider uppercase">
-              More Work Shouldn't Create More Chaos
-            </span>
-          </div>
-        </div>
+ 
 
         {/* Main Section Headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-4xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mb-6 mx-auto font-heading">

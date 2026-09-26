@@ -65,15 +65,7 @@ export default function ComparisonSection() {
       <div className="absolute top-1/3 right-1/4 w-[700px] h-[400px] bg-[#F3ECE0]/60 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Top Eyebrow Badge */}
-        <div className="w-fit max-w-[95%] sm:max-w-none mx-auto p-1 rounded-full border-2 border-dotted border-[#36281E]/40 mb-6 shadow-xs">
-          <div className="flex items-center justify-center gap-2 py-1 px-6 sm:px-8   rounded-full text-[#36281E] text-center">
-            <span className="text-[0.75rem] sm:text-xs md:text-sm font-semibold tracking-wider uppercase">
-              What Happens When You Win The Big Project?
-            </span>
-          </div>
-        </div>
-
+   
         {/* Main Section Headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-4xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mb-10 mx-auto font-heading">
           Imagine Your Client Suddenly Needs 100 Videos.
@@ -178,19 +170,20 @@ export default function ComparisonSection() {
               {/* Header with Title on Left, Man1 Image on Right */}
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
                 <div className="flex-1">
-                  <div className="inline-block px-3 py-1 bg-[#FDF0EE] text-[#991B1B] rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                  <div className="inline-block px-3 py-1 bg-[#FDF0EE] text-[#991B1B] rounded-md text-xs font-bold uppercase tracking-wider mb-3">
                     Option 1
                   </div>
                   <h4 className="text-xl sm:text-2xl font-bold text-[#991B1B] font-heading uppercase tracking-tight leading-tight">
                     Build Capacity From Scratch
                   </h4>
                 </div>
-                {/* Man 1 Image */}
-                <div className="w-48 sm:w-60 md:w-64 shrink-0 self-center sm:self-start">
+                {/* Man 1 Image with Half-Circle Arch Background */}
+                <div className="relative w-44 sm:w-56 md:w-60 shrink-0 self-center sm:self-start flex items-end justify-center  ">
+                  <div className="absolute top-6   w-44 h-48 sm:w-56   rounded-t-full bg-gradient-to-t from-transparent via-[#FCA5A5]/35 to-[#FCA5A5]/50 pointer-events-none" />
                   <img
                     src="/man1.png"
                     alt="Stressed Editor"
-                    className="w-full h-auto object-contain max-h-[220px] sm:max-h-[260px] md:max-h-[300px]"
+                    className="relative z-10 w-full h-auto object-contain max-h-[200px] sm:max-h-[240px] md:max-h-[270px]"
                   />
                 </div>
               </div>
@@ -231,19 +224,20 @@ export default function ComparisonSection() {
               {/* Header with Title on Left, Man 2 Image on Right */}
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
                 <div className="flex-1">
-                  <div className="inline-block px-3 py-1 bg-[#F0F7EE] text-[#166534] rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                  <div className="inline-block px-3 py-1 bg-[#F0F7EE] text-[#166534] rounded-md text-xs font-bold uppercase tracking-wider mb-3">
                     Option 2
                   </div>
                   <h4 className="text-xl sm:text-2xl font-bold text-[#166534] font-heading uppercase tracking-tight leading-tight">
                     Use Your LBB Backend Team
                   </h4>
                 </div>
-                {/* Man 2 Image */}
-                <div className="w-48 sm:w-60 md:w-64 shrink-0 self-center sm:self-start">
+                {/* Man 2 Image with Half-Circle Arch Background */}
+                <div className="relative w-44 sm:w-56 md:w-60 shrink-0 self-center sm:self-start flex items-end justify-center  ">
+                  <div className="absolute top-6  w-44 h-48 sm:w-56 rounded-t-full bg-gradient-to-t from-transparent via-[#86EFAC]/35 to-[#86EFAC]/50 pointer-events-none" />
                   <img
                     src="/man2.png"
                     alt="Happy Editor"
-                    className="w-full h-auto object-contain max-h-[220px] sm:max-h-[260px] md:max-h-[300px]"
+                    className="relative z-10 w-full h-auto object-contain max-h-[200px] sm:max-h-[240px] md:max-h-[270px]"
                   />
                 </div>
               </div>
