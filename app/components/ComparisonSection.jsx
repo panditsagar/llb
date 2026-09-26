@@ -186,11 +186,11 @@ export default function ComparisonSection() {
                   </h4>
                 </div>
                 {/* Man 1 Image */}
-                <div className="w-40 sm:w-48 shrink-0 self-center sm:self-start">
+                <div className="w-48 sm:w-60 md:w-64 shrink-0 self-center sm:self-start">
                   <img
-                    src="/man.png"
+                    src="/man1.png"
                     alt="Stressed Editor"
-                    className="w-full h-auto object-contain max-h-[160px] sm:max-h-[190px]"
+                    className="w-full h-auto object-contain max-h-[220px] sm:max-h-[260px] md:max-h-[300px]"
                   />
                 </div>
               </div>
@@ -239,11 +239,11 @@ export default function ComparisonSection() {
                   </h4>
                 </div>
                 {/* Man 2 Image */}
-                <div className="w-40 sm:w-48 shrink-0 self-center sm:self-start">
+                <div className="w-48 sm:w-60 md:w-64 shrink-0 self-center sm:self-start">
                   <img
                     src="/man2.png"
                     alt="Happy Editor"
-                    className="w-full h-auto object-contain max-h-[160px] sm:max-h-[190px]"
+                    className="w-full h-auto object-contain max-h-[220px] sm:max-h-[260px] md:max-h-[300px]"
                   />
                 </div>
               </div>
