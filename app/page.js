@@ -4,6 +4,7 @@ import ComparisonSection from "./components/ComparisonSection";
 import WorkflowSection from "./components/WorkflowSection";
 import TestimonialSection from "./components/TestimonialSection";
 import CapabilitiesSection from "./components/CapabilitiesSection";
+import RepeatableWorkflowSection from "./components/RepeatableWorkflowSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TestimonialSection />
       <WorkflowSection />
       <CapabilitiesSection />
+      <RepeatableWorkflowSection />
     </main>
   );
 }
