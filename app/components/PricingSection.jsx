@@ -11,13 +11,13 @@ import {
 
 export default function PricingSection() {
   const requirementFactors = [
-    { label: "NUMBER OF VIDEOS", bg: "bg-[#FFEDD5] text-[#9A3412]" },
-    { label: "VIDEO LENGTH", bg: "bg-[#E0F2FE] text-[#0369A1]" },
-    { label: "EDITING STYLE", bg: "bg-[#DCFCE7] text-[#166534]" },
-    { label: "COMPLEXITY", bg: "bg-[#F3E8FF] text-[#581C87]" },
-    { label: "MOTION GRAPHICS", bg: "bg-[#FEF9C3] text-[#854D0E]" },
-    { label: "REVISIONS", bg: "bg-[#FEE2E2] text-[#991B1B]" },
-    { label: "TURNAROUND", bg: "bg-[#CCFBF1] text-[#115E59]" },
+    { label: "NUMBER OF VIDEOS", bg: "bg-[#FFEDD5] text-[#9A3412]", transform: "-rotate-3 -translate-y-1" },
+    { label: "VIDEO LENGTH", bg: "bg-[#E0F2FE] text-[#0369A1]", transform: "rotate-3 translate-y-1" },
+    { label: "EDITING STYLE", bg: "bg-[#DCFCE7] text-[#166534]", transform: "-rotate-5 -translate-y-1.5" },
+    { label: "COMPLEXITY", bg: "bg-[#F3E8FF] text-[#581C87]", transform: "rotate-4 translate-y-1" },
+    { label: "MOTION GRAPHICS", bg: "bg-[#FEF9C3] text-[#854D0E]", transform: "-rotate-4 -translate-y-1" },
+    { label: "REVISIONS", bg: "bg-[#FEE2E2] text-[#991B1B]", transform: "rotate-5 translate-y-1.5" },
+    { label: "TURNAROUND", bg: "bg-[#CCFBF1] text-[#115E59]", transform: "-rotate-2 -translate-y-0.5" },
   ];
 
   return (
@@ -61,24 +61,53 @@ export default function PricingSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="bg-[#FFFDF9] rounded-xl p-6 sm:p-10 text-left mb-12 relative overflow-hidden"
         >
-          <div className="flex items-center gap-3 mb-6">
-           
+          <div className="flex items-center gap-3 mb-5">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2D231E] font-heading leading-tight">
               Final pricing depends on your actual requirements, including:
             </h3>
           </div>
 
-          {/* Requirement Factors Pill Tags Grid/Wrap */}
-          <div className="flex flex-wrap items-center gap-3 pt-2">
+          {/* Requirement Factors Pill Tags Wrap (Tight Gap + Cool Random Offsets) */}
+          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-1 pb-1">
             {requirementFactors.map((factor, idx) => (
-              <span
+              <motion.span
                 key={idx}
-                className={`px-4.5 py-2.5 sm:px-5 sm:py-3 rounded-md text-xs sm:text-sm md:text-base font-extrabold tracking-wider ${factor.bg} inline-flex items-center gap-2`}
+                whileHover={{ scale: 1.08, rotate: 0, zIndex: 20 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                className={`px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-full text-xs sm:text-sm md:text-base font-extrabold tracking-wider ${factor.bg} ${factor.transform} transition-all inline-flex items-center gap-1.5 shadow-xs cursor-pointer origin-center relative`}
               >
                 <CheckCircle2 className="w-4 h-4 opacity-70 shrink-0" />
                 {factor.label}
-              </span>
+              </motion.span>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Pre-CTA Text Block (No Card Container) */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="max-w-3xl mx-auto text-center mb-10 px-4 space-y-4"
+        >
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#2D231E] tracking-tight leading-[1.15] font-heading uppercase">
+            WANT TO SEE WHAT THIS WOULD COST FOR YOUR WORKFLOW?
+          </h3>
+
+          <div>
+            <span className="bg-[#FEF9C3] text-[#854D0E] p-3 rounded-lg font-bold text-xs sm:text-sm md:text-base tracking-widest uppercase inline-block  ">
+              LET’S LOOK AT YOUR REAL REQUIREMENTS.
+            </span>
+          </div>
+
+          <div className="space-y-1.5 pt-2">
+            <p className="text-base sm:text-lg md:text-xl font-bold text-[#382D26] leading-relaxed">
+              Bring your volume, formats and turnaround needs to a 10-minute call.
+            </p>
+            <p className="text-sm sm:text-base text-[#6B5A4E] font-normal leading-relaxed max-w-xl mx-auto">
+              We’ll help you understand the editing setup that makes sense for your current workflow.
+            </p>
           </div>
         </motion.div>
 
