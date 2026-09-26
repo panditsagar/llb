@@ -3,6 +3,7 @@
 import { ArrowRight, Sparkles, CheckCircle2, Star } from "lucide-react";
 import VideoMarquee from "./VideoMarquee";
 import ClientLogoStrip from "./ClientLogoStrip";
+import ProcessSection from "./ProcessSection";
 
 export default function Hero() {
   const valueBadges = [
@@ -122,6 +123,9 @@ export default function Hero() {
 
       {/* Client Logo Strip */}
       <ClientLogoStrip />
+
+      {/* Process of Raw Video -> Final LBB Edit Section */}
+      <ProcessSection />
     </section>
   );
 }
