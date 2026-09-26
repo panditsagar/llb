@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Play, Film, Music, Activity } from "lucide-react";
+import { Play, Film, Music, Activity, ArrowRight } from "lucide-react";
 
 export default function ProcessSection() {
   return (
@@ -18,7 +18,7 @@ export default function ProcessSection() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Section Headline */}
-        <div className="text-center mb-8 sm:mb-12">
+        <div className="text-center mb-8 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-4xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mx-auto font-heading">
             From Raw Footage To Final LBB Edit
           </h2>
@@ -224,7 +224,21 @@ export default function ProcessSection() {
             </div>
           </div>
         </div>
+
+        {/* Primary Call to Action Button */}
+        <div className="mt-8 sm:mt-12 flex justify-center z-20 relative">
+          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#36281E]/40 flex sm:inline-flex items-center justify-center">
+            <a
+              href="#book-call"
+              className="w-full sm:w-auto relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-[#FAF7F2] bg-[#36281E] hover:bg-[#4a392c] transition-colors duration-300 shadow-lg shadow-stone-900/10"
+            >
+              <span>Get Started With LBB Edit</span>
+              <ArrowRight className="w-5 h-5 ml-2.5" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
