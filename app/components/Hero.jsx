@@ -2,6 +2,7 @@
 
 import { ArrowRight, Sparkles, CheckCircle2, Star } from "lucide-react";
 import VideoMarquee from "./VideoMarquee";
+import ClientLogoStrip from "./ClientLogoStrip";
 
 export default function Hero() {
   const valueBadges = [
@@ -118,6 +119,9 @@ export default function Hero() {
 
       {/* Running Video Marquee Banner */}
       <VideoMarquee />
+
+      {/* Client Logo Strip */}
+      <ClientLogoStrip />
     </section>
   );
 }
