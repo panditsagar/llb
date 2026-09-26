@@ -81,20 +81,12 @@ export default function RepeatableWorkflowSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#FAF7F2] text-[#2D231E] py-16 md:py-24">
+    <section className="relative overflow-hidden bg-[#FAF7F2] text-[#2D231E] pb-16 md:pb-24">
       {/* Ambient Warm Background Glows */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[500px] bg-[#F5EFE6]/60 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Top Pill Badge */}
-        <div className="w-fit mx-auto p-1 rounded-full border-2 border-dotted border-[#36281E]/40 mb-6">
-          <div className="flex items-center justify-center gap-2 py-1.5 px-5 bg-[#EFE7DC] rounded-full text-[#36281E]">
-            <Sparkles className="w-4 h-4 text-[#8C6D53]" />
-            <span className="text-xs sm:text-sm font-semibold tracking-wide">
-              Step-by-Step Workflow
-            </span>
-          </div>
-        </div>
+      
 
         {/* Section Headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-3xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mb-12 md:mb-20 mx-auto font-heading">
@@ -137,19 +129,27 @@ export default function RepeatableWorkflowSection() {
                     isRight ? "md:justify-end" : "md:justify-start"
                   }`}
                 >
-                  {/* Card Reveal Animation on Scroll */}
+                  {/* Card Reveal Animation on Scroll (Alternating Left & Right Entrance) */}
                   <motion.div
-                    initial={{ opacity: 0, y: 50, scale: 0.96 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    initial={{
+                      opacity: 0,
+                      x: isRight ? 80 : -80,
+                      scale: 0.95,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                      scale: 1,
+                    }}
                     viewport={{ once: false, amount: 0.3 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
                     className={`w-full md:w-[62%] ${step.cardBg} rounded-xl p-5 sm:p-7 relative overflow-hidden flex items-start gap-4 sm:gap-6 z-10`}
                   >
                     {/* Vertical Pill Bar attached to Left Edge (Matching Reference Image) */}
                     <div
                       className={`w-9 sm:w-10 rounded-lg ${step.barBg} flex items-center justify-center shrink-0 self-stretch min-h-[100px]`}
                     >
-                      <span className="text-xs font-black tracking-wider uppercase rotate-[-90deg] whitespace-nowrap">
+                      <span className="text-md font-black tracking-wider uppercase rotate-[-90deg] whitespace-nowrap">
                         {step.verticalTag}
                       </span>
                     </div>
@@ -185,7 +185,7 @@ export default function RepeatableWorkflowSection() {
           <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#36281E]/40 flex sm:inline-flex items-center justify-center">
             <a
               href="#book-call"
-              className="w-full sm:w-auto relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-[#FAF7F2] bg-[#36281E] hover:bg-[#2D231E] transition-colors shadow-lg shadow-stone-900/10"
+              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px] relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-[#FAF7F2] bg-[#36281E] hover:bg-[#2D231E] transition-colors shadow-lg shadow-stone-900/10"
             >
               <span>Book 10 min Call</span>
               <ArrowRight className="w-5 h-5 ml-2.5" />
