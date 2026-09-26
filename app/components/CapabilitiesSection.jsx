@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
 
 export default function CapabilitiesSection() {
   const cardsData = [
@@ -90,27 +90,27 @@ export default function CapabilitiesSection() {
           What Can We Handle for You?
         </h2>
 
-        {/* Horizontal Stacked Cards Container */}
-        <div className="space-y-6 mb-12 text-left">
-          {cardsData.map((card) => (
+        {/* 2-Card Per Row Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left">
+          {cardsData.map((card, idx) => (
             <div
               key={card.id}
-              className="bg-white/80 rounded-xl p-6 sm:p-7    transition-all space-y-4 relative overflow-hidden"
+              className={`bg-white/80 rounded-xl p-6 sm:p-7 transition-all space-y-4 relative overflow-hidden ${
+                idx === cardsData.length - 1 ? "md:col-span-2" : ""
+              }`}
             >
-              {/* Header Row: Title (Left) & Format Badge (Right) */}
+              {/* Header Row: Title */}
               <div className="flex items-center justify-between gap-4">
                 <h3 className="text-2xl sm:text-3xl font-bold text-[#2D231E] font-heading">
                   {card.title}
                 </h3>
-
-               
               </div>
 
               {/* Middle Section: Colorful Tags/Pills Row */}
               <div className="flex flex-wrap items-center gap-2.5 pt-1">
-                {card.pills.map((pill, idx) => (
+                {card.pills.map((pill, pIdx) => (
                   <span
-                    key={idx}
+                    key={pIdx}
                     className={`px-3.5 py-1.5 rounded-md text-xs sm:text-sm font-semibold tracking-wide ${pill.bg} transition-transform hover:scale-[1.02] inline-flex items-center`}
                   >
                     {pill.label}
@@ -119,6 +119,14 @@ export default function CapabilitiesSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Text below all cards */}
+        <div className="max-w-4xl mx-auto mb-10 p-4 sm:p-6 bg-[#F5EFE6] text-[#FAF7F2] rounded-xl flex items-center justify-center gap-3.5   ">
+          <ShieldCheck className="w-5 h-5 text-[#FEF08A] shrink-0" />
+            <h3 className="text-lg sm:text-xl   font-semibold font-heading  text-[#2D231E]">
+            AI where it improves speed. Human quality control stays in the loop.
+          </h3>
         </div>
 
         {/* Global Bottom Section CTA */}
