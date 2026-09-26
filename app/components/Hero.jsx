@@ -56,10 +56,10 @@ export default function Hero() {
 
         {/* Subheadline & Pitch Paragraph */}
         <div className="max-w-4xl mx-auto space-y-3 mb-6 sm:mb-10 px-2 sm:px-0">
-          <p className="text-xl sm:text-xl md:text-2xl font-bold text-[#382D26] tracking-tight leading-tight">
+          <p className="text-xl sm:text-xl md:text-[1.6rem] font-bold text-[#382D26] tracking-tight leading-tight">
             You win the client. We handle the editing behind the scenes.
           </p>
-          <p className="text-md sm:text-base md:text-lg text-[#5E5047] font-normal ">
+          <p className="text-md sm:text-base md:text-[1.4rem] text-[#5E5047] font-normal ">
             Get a reliable backend editing team behind your business so you can
             handle more content, more clients and larger projects without
             constantly recruiting, testing, training and managing editors.
