@@ -11,13 +11,41 @@ import {
 
 export default function PricingSection() {
   const requirementFactors = [
-    { label: "NUMBER OF VIDEOS", bg: "bg-[#FFEDD5] text-[#9A3412]", transform: "-rotate-3 -translate-y-1" },
-    { label: "VIDEO LENGTH", bg: "bg-[#E0F2FE] text-[#0369A1]", transform: "rotate-3 translate-y-1" },
-    { label: "EDITING STYLE", bg: "bg-[#DCFCE7] text-[#166534]", transform: "-rotate-5 -translate-y-1.5" },
-    { label: "COMPLEXITY", bg: "bg-[#F3E8FF] text-[#581C87]", transform: "rotate-4 translate-y-1" },
-    { label: "MOTION GRAPHICS", bg: "bg-[#FEF9C3] text-[#854D0E]", transform: "-rotate-4 -translate-y-1" },
-    { label: "REVISIONS", bg: "bg-[#FEE2E2] text-[#991B1B]", transform: "rotate-5 translate-y-1.5" },
-    { label: "TURNAROUND", bg: "bg-[#CCFBF1] text-[#115E59]", transform: "-rotate-2 -translate-y-0.5" },
+    {
+      label: "NUMBER OF VIDEOS",
+      bg: "bg-[#CFFAFE] text-[#0891B2]",
+      transform: "-rotate-3 -translate-y-1",
+    },
+    {
+      label: "VIDEO LENGTH",
+      bg: "bg-[#FFEDD5] text-[#9A3412]",
+      transform: "rotate-3 translate-y-1",
+    },
+    {
+      label: "EDITING STYLE",
+      bg: "bg-[#DCFCE7] text-[#166534]",
+      transform: "-rotate-5 -translate-y-1.5",
+    },
+    {
+      label: "COMPLEXITY",
+      bg: "bg-[#F3E8FF] text-[#581C87]",
+      transform: "rotate-4 translate-y-1",
+    },
+    {
+      label: "MOTION GRAPHICS",
+      bg: "bg-[#FEF9C3] text-[#854D0E]",
+      transform: "-rotate-4 -translate-y-1",
+    },
+    {
+      label: "REVISIONS",
+      bg: "bg-[#FEE2E2] text-[#991B1B]",
+      transform: "rotate-5 translate-y-1.5",
+    },
+    {
+      label: "TURNAROUND",
+      bg: "bg-[#CCFBF1] text-[#115E59]",
+      transform: "-rotate-2 -translate-y-0.5",
+    },
   ];
 
   return (
@@ -35,7 +63,7 @@ export default function PricingSection() {
           className="text-3xl sm:text-4xl md:text-5xl  font-semibold text-[#2D231E] tracking-tight leading-[1.1] mb-6 mx-auto font-heading"
         >
           Video Editing Starts From{" "}
-          <span className="bg-[#FEF08A] text-[#36281E] px-3 py-1 rounded-xl inline-block shadow-xs">
+          <span className="bg-[#FEF08A] text-[#36281E] px-2 sm:px-2.5 py-0.5 rounded-lg inline-block">
             $15/Video.
           </span>
         </motion.h2>
@@ -74,7 +102,7 @@ export default function PricingSection() {
                 key={idx}
                 whileHover={{ scale: 1.08, rotate: 0, zIndex: 20 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                className={`px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-full text-xs sm:text-sm md:text-base font-extrabold tracking-wider ${factor.bg} ${factor.transform} transition-all inline-flex items-center gap-1.5 shadow-xs cursor-pointer origin-center relative`}
+                className={`px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-full text-xs sm:text-sm md:text-base font-extrabold tracking-wider ${factor.bg} ${factor.transform} transition-all inline-flex items-center gap-1.5 cursor-pointer origin-center relative`}
               >
                 <CheckCircle2 className="w-4 h-4 opacity-70 shrink-0" />
                 {factor.label}
@@ -89,24 +117,35 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.35 }}
-          className="max-w-3xl mx-auto text-center mb-10 px-4 space-y-4"
+          className="max-w-3xl mx-auto text-center mb-10 px-4 space-y-5"
         >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#2D231E] tracking-tight leading-[1.15] font-heading uppercase">
-            WANT TO SEE WHAT THIS WOULD COST FOR YOUR WORKFLOW?
-          </h3>
-
-          <div>
-            <span className="bg-[#FEF9C3] text-[#854D0E] p-3 rounded-lg font-bold text-xs sm:text-sm md:text-base tracking-widest uppercase inline-block  ">
-              LET’S LOOK AT YOUR REAL REQUIREMENTS.
+          {/* Badge Tag */}
+          <div className="flex justify-center">
+            <span className="  font-bold text-sm sm:text-lg tracking-wider uppercase   ">
+              Let’s Look At Your Real Requirements
             </span>
           </div>
 
-          <div className="space-y-1.5 pt-2">
-            <p className="text-base sm:text-lg md:text-xl font-bold text-[#382D26] leading-relaxed">
-              Bring your volume, formats and turnaround needs to a 10-minute call.
+          {/* Main Headline */}
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#2D231E] tracking-tight leading-[1.15] font-heading">
+            Want to see what this would cost for{" "}
+            <span className="bg-[#FEF08A] text-[#36281E] px-2 sm:px-2.5 py-0.5 rounded-lg inline-block">
+              your workflow?
+            </span>
+          </h3>
+
+          {/* Subtitle / Copy */}
+          <div className="space-y-2 pt-1 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl font-semibold text-[#2D231E] leading-relaxed">
+              Bring your volume, formats, and turnaround needs to a{" "}
+              <span className="underline decoration-[#FEF08A] decoration-4 underline-offset-4 font-bold text-[#2D231E]">
+                10-minute call
+              </span>
+              .
             </p>
-            <p className="text-sm sm:text-base text-[#6B5A4E] font-normal leading-relaxed max-w-xl mx-auto">
-              We’ll help you understand the editing setup that makes sense for your current workflow.
+            <p className="text-sm sm:text-base text-[#6B5A4E] font-normal leading-relaxed max-w-lg mx-auto">
+              We’ll help you understand the exact editing setup that makes sense
+              for your current workflow.
             </p>
           </div>
         </motion.div>
