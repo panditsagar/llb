@@ -17,6 +17,11 @@ body, p, button, a, div {
 .font-handwriting {
   font-family: var(--font-caveat), cursive;
 }
+/* Custom text selection highlight matching website brand */
+::selection {
+  background-color: #FEF08A; /* Soft brand yellow */
+  color: #36281E;            /* Dark brown text */
+}
 
 /* Custom scrollbar and smooth design tweaks */
 html {
