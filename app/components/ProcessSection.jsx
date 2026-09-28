@@ -20,7 +20,7 @@ export default function ProcessSection() {
         {/* Main Section Headline */}
         <div className="text-center mb-8 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-4xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mx-auto font-heading">
-            From Raw Footage To Final LBB Edit
+            From Raw Footage <span className="text-[#C2410C]"> To Final LBB Edit</span> 
           </h2>
         </div>
 
@@ -227,10 +227,10 @@ export default function ProcessSection() {
 
         {/* Primary Call to Action Button */}
         <div className="mt-8 sm:mt-12 flex justify-center z-20 relative">
-          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#36281E]/40 flex sm:inline-flex items-center justify-center">
+          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#f97316]/55 flex sm:inline-flex items-center justify-center">
             <a
               href="#book-call"
-              className="w-full sm:w-auto relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-[#FAF7F2] bg-[#36281E] hover:bg-[#4a392c] transition-colors duration-300 shadow-lg shadow-stone-900/10"
+              className="w-full sm:w-auto relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-white gradient-brand hover:brightness-105 transition-all duration-300 shadow-lg shadow-orange-900/20"
             >
               <span>Get Started With LBB Edit</span>
               <ArrowRight className="w-5 h-5 ml-2.5" />

@@ -176,8 +176,8 @@ export default function TestimonialSection() {
        
 
         {/* Main Section Headline */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-3xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mb-8 mx-auto font-heading">
-          See the Work Before You Book the Call.
+        <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-2xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mb-8 mx-auto font-heading">
+          See the Work Before You <span className="text-[#C2410C]">  Book the Call. </span>
         </h2>
 
         {/* Modern Segmented Pill Tabs Container */}
@@ -190,7 +190,7 @@ export default function TestimonialSection() {
                 onClick={() => setActiveTab(cat)}
                 className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-md text-xs sm:text-sm font-bold whitespace-nowrap transition-all duration-300 cursor-pointer ${
                   isActive
-                    ? "bg-[#36281E] text-[#FAF7F2] shadow-md shadow-stone-900/15 scale-[1.02]"
+                    ? "bg-[#C2410C] text-[#FAF7F2] shadow-md shadow-stone-900/15 scale-[1.02]"
                     : "text-[#574940] hover:text-[#2D231E] hover:bg-white/50"
                 }`}
               >

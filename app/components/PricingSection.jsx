@@ -63,7 +63,7 @@ export default function PricingSection() {
           className="text-3xl sm:text-4xl md:text-5xl  font-semibold text-[#2D231E] tracking-tight leading-[1.1] mb-6 mx-auto font-heading"
         >
           Video Editing Starts From{" "}
-          <span className="bg-[#FEF08A] text-[#36281E] px-2 sm:px-2.5 py-0.5 rounded-lg inline-block">
+          <span className="bg-[#FF5B24] text-[#ffffff] px-2 sm:px-2.5 py-0.5 rounded-lg inline-block">
             $15/Video.
           </span>
         </motion.h2>
@@ -129,7 +129,7 @@ export default function PricingSection() {
           {/* Main Headline */}
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#2D231E] tracking-tight leading-[1.15] font-heading">
             Want to see what this would cost for{" "}
-            <span className="bg-[#FEF08A] text-[#36281E] px-2 sm:px-2.5 py-0.5 rounded-lg inline-block">
+            <span className="bg-[#FF5B24] text-[#ffffff] px-2 sm:px-2.5 py-0.5 rounded-lg inline-block">
               your workflow?
             </span>
           </h3>
@@ -138,7 +138,7 @@ export default function PricingSection() {
           <div className="space-y-2 pt-1 max-w-2xl mx-auto">
             <p className="text-lg sm:text-xl font-semibold text-[#2D231E] leading-relaxed">
               Bring your volume, formats, and turnaround needs to a{" "}
-              <span className="underline decoration-[#FEF08A] decoration-4 underline-offset-4 font-bold text-[#2D231E]">
+              <span className="underline decoration-[#FF5B24] decoration-4 underline-offset-4 font-bold text-[#2D231E]">
                 10-minute call
               </span>
               .
@@ -158,10 +158,10 @@ export default function PricingSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col items-center"
         >
-          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#36281E]/40 flex sm:inline-flex items-center justify-center">
+          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#f97316]/55 flex sm:inline-flex items-center justify-center">
             <a
               href="#book-call"
-              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px]  relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-[#FAF7F2] bg-[#36281E] hover:bg-[#2D231E] transition-colors shadow-lg shadow-stone-900/10"
+              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px]  relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-white gradient-brand hover:brightness-105 transition-all shadow-lg shadow-orange-900/20"
             >
               <span>Book 10 min Call</span>
               <ArrowRight className="w-5 h-5 ml-2.5" />

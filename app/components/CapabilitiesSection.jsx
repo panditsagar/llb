@@ -87,7 +87,7 @@ export default function CapabilitiesSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Main Section Headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-3xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mb-12 mx-auto font-heading">
-          What Can We Handle for You?
+          What Can We <span className="text-[#C2410C]">  Handle for You? </span>
         </h2>
 
         {/* 2-Card Per Row Grid */}
@@ -131,10 +131,10 @@ export default function CapabilitiesSection() {
 
         {/* Global Bottom Section CTA */}
         <div className="pt-4 flex flex-col items-center">
-          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#36281E]/40 flex sm:inline-flex items-center justify-center">
+          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#f97316]/55 flex sm:inline-flex items-center justify-center">
             <a
               href="#book-call"
-              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px] relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-[#FAF7F2] bg-[#36281E] hover:bg-[#2D231E] transition-colors shadow-lg shadow-stone-900/10"
+              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px] relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-white gradient-brand hover:brightness-105 transition-all shadow-lg shadow-orange-900/20"
             >
               <span>Book 10 min Call</span>
               <ArrowRight className="w-5 h-5 ml-2.5" />

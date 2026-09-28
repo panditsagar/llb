@@ -58,7 +58,7 @@ export default function WorkflowSection() {
 
         {/* Main Section Headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-3xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mb-12 mx-auto font-heading">
-          Does LBB Fit Into Your Workflow?
+          Does LBB Fit Into <span className="text-[#C2410C]">  Your Workflow? </span>
         </h2>
 
         {/* 6 Workflow Cards Grid (2 cards per row) */}
@@ -90,10 +90,10 @@ export default function WorkflowSection() {
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#36281E]/40 flex sm:inline-flex items-center justify-center">
+          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#f97316]/55 flex sm:inline-flex items-center justify-center">
             <a
               href="#book-call"
-              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px] relative inline-flex items-center justify-center px-10 sm:px-20 py-4 text-base sm:text-lg font-bold rounded-full text-[#FAF7F2] bg-[#36281E] shadow-lg shadow-stone-900/10"
+              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px] relative inline-flex items-center justify-center px-10 sm:px-20 py-4 text-base sm:text-lg font-bold rounded-full text-white gradient-brand shadow-lg shadow-orange-900/20 hover:brightness-105 transition-all"
             >
               <span>Book 10 min Call</span>
               <ArrowRight className="w-5 h-5 ml-2.5" />

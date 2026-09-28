@@ -50,7 +50,7 @@ export default function Hero() {
             className="inline-block h-[1em] w-auto align-middle -translate-y-[2px]"
           />{" "}
           Work Without Building a{" "}
-          <span className="bg-[#FEF08A] text-[#36281E] px-2 sm:px-2.5 py-0.5 rounded-lg inline-block text-3xl sm:text-4xl md:text-5xl lg:text-[4rem]">
+          <span className="bg-[#FF5B24] text-[#ffffff] px-2 sm:px-2.5 py-0.5 rounded-lg inline-block text-3xl sm:text-4xl md:text-5xl lg:text-[4rem]">
             BIGGER
           </span>{" "}
           Editing Team.
@@ -58,7 +58,7 @@ export default function Hero() {
 
         {/* Subheadline & Pitch Paragraph */}
         <div className="max-w-4xl mx-auto space-y-3 mb-6 sm:mb-10 px-2 sm:px-0">
-          <p className="text-xl sm:text-xl md:text-[1.6rem] font-bold text-[#382D26] tracking-tight leading-tight">
+          <p className="text-xl sm:text-xl md:text-[1.6rem] font-bold text-[#C2410C] tracking-tight leading-tight">
             You win the client. We handle the editing behind the scenes.
           </p>
           <p className="text-md sm:text-base md:text-[1.4rem] text-[#5E5047] font-normal ">
@@ -71,10 +71,10 @@ export default function Hero() {
         {/* Primary Call to Action Button & Rating */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6 mb-4">
           {/* CTA Button with Outer Dotted Border & Space */}
-          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#36281E]/40 flex sm:inline-flex items-center justify-center">
+          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#f97316]/55 flex sm:inline-flex items-center justify-center">
             <a
               href="#book-call"
-              className="w-full sm:w-auto relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-[#FAF7F2] bg-[#36281E] shadow-lg shadow-stone-900/10"
+              className="w-full sm:w-auto relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-white gradient-brand shadow-lg shadow-orange-900/20 hover:brightness-105 transition-all"
             >
               <span>Book 10 min Call</span>
               <ArrowRight className="w-5 h-5 ml-2.5" />
@@ -107,7 +107,7 @@ export default function Hero() {
               />
             </div>
             <div className="text-xs">
-              <span className="text-2xl sm:text-3xl font-bold text-[#2D231E] block">
+              <span className="text-2xl sm:text-3xl font-bold text-[#C2410C] block">
                 1000+
               </span>
               <span className="text-[#6E5E54] font-medium">

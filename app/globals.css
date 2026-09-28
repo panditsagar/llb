@@ -2,12 +2,12 @@
 
 @theme {
   --font-sans: 'Manrope', var(--font-manrope), system-ui, sans-serif;
-  --font-heading: 'Chillax', sans-serif;
+  --font-heading: var(--font-plus-jakarta), sans-serif;
   --font-handwriting: var(--font-caveat), cursive;
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: 'Chillax', sans-serif;
+  font-family: var(--font-plus-jakarta), sans-serif;
 }
 
 body, p, button, a, div {
@@ -17,6 +17,12 @@ body, p, button, a, div {
 .font-handwriting {
   font-family: var(--font-caveat), cursive;
 }
+
+.gradient-brand {
+  background-color: #f97316;
+  background-image: linear-gradient(180deg, #f97316 0%, #ea580c 100%);
+}
+
 /* Custom text selection highlight matching website brand */
 ::selection {
   background-color: #FEF08A; /* Soft brand yellow */

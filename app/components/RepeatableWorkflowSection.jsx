@@ -22,7 +22,7 @@ export default function RepeatableWorkflowSection() {
       icon: Upload,
       cardBg: "bg-[#FFFDF9]",
       borderColor: "border-[#E5DDD0]",
-      barBg: "bg-[#36281E] text-[#FAF7F2]",
+      barBg: "bg-[#C2410C] text-[#FAF7F2]",
       iconBg: "bg-[#EFE7DC] text-[#36281E]",
       align: "left", // Left aligned on desktop
     },
@@ -35,7 +35,7 @@ export default function RepeatableWorkflowSection() {
       icon: Scissors,
       cardBg: "bg-[#FFFDF9]",
       borderColor: "border-[#E5DDD0]",
-      barBg: "bg-[#36281E] text-[#FAF7F2]",
+      barBg: "bg-[#C2410C] text-[#FAF7F2]",
       iconBg: "bg-[#EFE7DC] text-[#36281E]",
       align: "right", // Right aligned on desktop
     },
@@ -48,7 +48,7 @@ export default function RepeatableWorkflowSection() {
       icon: ShieldCheck,
       cardBg: "bg-[#FFFDF9]",
       borderColor: "border-[#E5DDD0]",
-      barBg: "bg-[#36281E] text-[#FAF7F2]",
+      barBg: "bg-[#C2410C] text-[#FAF7F2]",
       iconBg: "bg-[#EFE7DC] text-[#36281E]",
       align: "left",
     },
@@ -61,7 +61,7 @@ export default function RepeatableWorkflowSection() {
       icon: RotateCcw,
       cardBg: "bg-[#FFFDF9]",
       borderColor: "border-[#E5DDD0]",
-      barBg: "bg-[#36281E] text-[#FAF7F2]",
+      barBg: "bg-[#C2410C] text-[#FAF7F2]",
       iconBg: "bg-[#EFE7DC] text-[#36281E]",
       align: "right",
     },
@@ -74,7 +74,7 @@ export default function RepeatableWorkflowSection() {
       icon: CheckCircle2,
       cardBg: "bg-[#FFFDF9]",
       borderColor: "border-[#E5DDD0]",
-      barBg: "bg-[#36281E] text-[#FAF7F2]",
+      barBg: "bg-[#C2410C] text-[#FAF7F2]",
       iconBg: "bg-[#EFE7DC] text-[#36281E]",
       align: "left",
     },
@@ -90,7 +90,7 @@ export default function RepeatableWorkflowSection() {
 
         {/* Section Headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-3xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mb-12 md:mb-20 mx-auto font-heading">
-          A Repeatable Editing Workflow Behind Your Business.
+          A Repeatable Editing Workflow <span className="text-[#C2410C]">  Behind Your Business. </span>
         </h2>
 
         {/* Staggered Snake / Zig-Zag Cards Container */}
@@ -182,10 +182,10 @@ export default function RepeatableWorkflowSection() {
 
         {/* Global Bottom CTA Button */}
         <div className="pt-12 md:pt-16 flex flex-col items-center">
-          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#36281E]/40 flex sm:inline-flex items-center justify-center">
+          <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#f97316]/55 flex sm:inline-flex items-center justify-center">
             <a
               href="#book-call"
-              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px] relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-[#FAF7F2] bg-[#36281E] hover:bg-[#2D231E] transition-colors shadow-lg shadow-stone-900/10"
+              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px] relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-white gradient-brand hover:brightness-105 transition-all shadow-lg shadow-orange-900/20"
             >
               <span>Book 10 min Call</span>
               <ArrowRight className="w-5 h-5 ml-2.5" />
