@@ -140,16 +140,14 @@ export default function TestimonialSection() {
           })}
         </div>
 
-        <div
-          className={`grid grid-cols-1 sm:grid-cols-2 ${
-            isVerticalCategory ? "lg:grid-cols-4 max-w-5xl" : "lg:grid-cols-3 max-w-6xl"
-          } gap-3 mx-auto mb-12 items-center justify-center`}
-        >
+        <div className="flex flex-wrap gap-3 mx-auto mb-12 items-center justify-center">
           {currentCategoryData.videos.map((item) => (
             <div
               key={item.id}
               className={`group relative rounded-xl overflow-hidden shadow-lg shadow-stone-900/10 hover:shadow-2xl transition-all duration-300 w-full ${
-                isVerticalCategory ? "aspect-[9/16]" : "aspect-[16/9]"
+                isVerticalCategory
+                  ? "aspect-[9/16] sm:w-[calc(50%-0.375rem)] lg:w-[calc(25%-0.5625rem)] max-w-[240px]"
+                  : "aspect-[16/9] sm:w-[calc(50%-0.375rem)] lg:w-[calc(33.333%-0.5rem)] max-w-[380px]"
               }`}
             >
               <iframe
