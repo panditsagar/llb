@@ -2,18 +2,36 @@
 
 import React from "react";
 
-const VIDEO_IMAGES = [
-  { id: 1, image: "/video1.png" },
-  { id: 2, image: "/video2.png" },
-  { id: 3, image: "/video3.png" },
-  { id: 4, image: "/video4.png" },
-  { id: 5, image: "/video5.png" },
-  { id: 6, image: "/video6.png" },
+const MARQUEE_VIDEOS = [
+  {
+    id: 1,
+    src: "https://play.gumlet.io/embed/6ac34f6fd00ed21e8bbfa726",
+  },
+  {
+    id: 2,
+    src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b003",
+  },
+  {
+    id: 3,
+    src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d461a",
+  },
+  {
+    id: 4,
+    src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b004",
+  },
+  {
+    id: 5,
+    src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b007",
+  },
+  {
+    id: 6,
+    src: "https://play.gumlet.io/embed/6ac34f6fd00ed21e8bbfa725",
+  },
 ];
 
 export default function VideoMarquee() {
   // Triplicated array for seamless infinite scrolling
-  const items = [...VIDEO_IMAGES, ...VIDEO_IMAGES, ...VIDEO_IMAGES];
+  const items = [...MARQUEE_VIDEOS, ...MARQUEE_VIDEOS, ...MARQUEE_VIDEOS];
 
   return (
     <div className="w-full relative py-6 overflow-x-auto sm:overflow-hidden select-none touch-pan-x scrollbar-none">
@@ -27,11 +45,14 @@ export default function VideoMarquee() {
             key={`${item.id}-${index}`}
             className="relative mx-1 w-[165px] h-[285px] sm:w-[210px] sm:h-[360px] rounded-2xl overflow-hidden shrink-0"
           >
-            {/* Background Image from Public Folder */}
-            <img
-              src={item.image}
-              alt=""
-              className="absolute inset-0 w-full h-full object-cover"
+            <iframe
+              src={item.src}
+              title={`Gumlet video player ${item.id}`}
+              loading="lazy"
+              referrerPolicy="origin"
+              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full border-0"
             />
           </div>
         ))}
