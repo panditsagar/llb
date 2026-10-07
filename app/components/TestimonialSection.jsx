@@ -3,78 +3,98 @@
 import { useState } from "react";
 
 const testimonials = {
-  Landscape: {
+  "Talking Head": {
+    type: "vertical",
+    videos: [
+      {
+        id: "talking-head-1",
+        src: "https://play.gumlet.io/embed/6ac34f6fd00ed21e8bbfa726",
+      },
+      {
+        id: "talking-head-2",
+        src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b003",
+      },
+      {
+        id: "talking-head-3",
+        src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d461a",
+      },
+    ],
+  },
+  Podcast: {
     type: "landscape",
     videos: [
       {
-        id: "landscape-1",
+        id: "podcast-1",
         src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d4619",
       },
       {
-        id: "landscape-2",
+        id: "podcast-2",
         src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b006",
       },
+    ],
+  },
+  UGC: {
+    type: "vertical",
+    videos: [
       {
-        id: "landscape-3",
+        id: "ugc-1",
+        src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b004",
+      },
+      {
+        id: "ugc-2",
+        src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b007",
+      },
+      {
+        id: "ugc-3",
+        src: "https://play.gumlet.io/embed/6ac34f6fd00ed21e8bbfa725",
+      },
+    ],
+  },
+  "Product Video": {
+    type: "landscape",
+    videos: [
+      {
+        id: "product-video-1",
         src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b005",
       },
       {
-        id: "landscape-4",
+        id: "product-video-2",
         src: "https://play.gumlet.io/embed/6ac3e142bbfc8c057081836f",
       },
+    ],
+  },
+  "Motion Graphics": {
+    type: "landscape",
+    videos: [
       {
-        id: "landscape-5",
+        id: "motion-graphics-1",
         src: "https://play.gumlet.io/embed/6ac3e1425599ef1e51a8ff96",
       },
+    ],
+  },
+  YouTube: {
+    type: "landscape",
+    videos: [
       {
-        id: "landscape-6",
+        id: "youtube-1",
         src: "https://play.gumlet.io/embed/6ac3e142d00ed21e8bc3bf91",
       },
     ],
   },
-  Vertical: {
+  Reels: {
     type: "vertical",
     videos: [
       {
-        id: "vertical-2",
+        id: "reels-1",
         src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d4618",
       },
       {
-        id: "vertical-3",
+        id: "reels-2",
         src: "https://play.gumlet.io/embed/6ac3e142d00ed21e8bc3bf92",
       },
       {
-        id: "vertical-4",
+        id: "reels-3",
         src: "https://play.gumlet.io/embed/6ac3e1425599ef1e51a8ff97",
-      },
-    ],
-  },
-  Marquee: {
-    type: "vertical",
-    videos: [
-      {
-        id: "marquee-1",
-        src: "https://play.gumlet.io/embed/6ac34f6fd00ed21e8bbfa726",
-      },
-      {
-        id: "marquee-2",
-        src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b003",
-      },
-      {
-        id: "marquee-3",
-        src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d461a",
-      },
-      {
-        id: "marquee-4",
-        src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b004",
-      },
-      {
-        id: "marquee-5",
-        src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b007",
-      },
-      {
-        id: "marquee-6",
-        src: "https://play.gumlet.io/embed/6ac34f6fd00ed21e8bbfa725",
       },
     ],
   },
@@ -83,9 +103,10 @@ const testimonials = {
 const categories = Object.keys(testimonials);
 
 export default function TestimonialSection() {
-  const [activeTab, setActiveTab] = useState("Landscape");
+  const [activeTab, setActiveTab] = useState("Talking Head");
 
-  const currentCategoryData = testimonials[activeTab] || testimonials.Landscape;
+  const currentCategoryData =
+    testimonials[activeTab] || testimonials["Talking Head"];
   const isVerticalCategory = currentCategoryData.type === "vertical";
 
   return (
