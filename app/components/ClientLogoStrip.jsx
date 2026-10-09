@@ -2,12 +2,13 @@
 
 export default function ClientLogoStrip() {
   const clientLogos = [
-    { src: "/logos/logo1.png", alt: "Client Logo 1" },
     { src: "/logos/logo2.png", alt: "Client Logo 2" },
     { src: "/logos/logo3.png", alt: "Client Logo 3" },
-    { src: "/logos/logo7.png", alt: "Client Logo 7" },
-    { src: "/logos/logo9.png", alt: "Client Logo 9" },
-    { src: "/logos/logo10.png", alt: "Client Logo 10" },
+    { src: "/logos/logo6.webp", alt: "Client Logo 10" },
+
+    { src: "/logos/logo1.jpg", alt: "Client Logo 1" },
+    { src: "/logos/logo4.png", alt: "Client Logo 7" },
+    { src: "/logos/logo5.png", alt: "Client Logo 9" },
   ];
 
   return (
@@ -18,7 +19,7 @@ export default function ClientLogoStrip() {
         </p>
 
         {/* Client Logos Strip */}
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10 ">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8   ">
           {clientLogos.map((logo, idx) => (
             <img
               key={idx}
