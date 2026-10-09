@@ -1,6 +1,6 @@
 "use client";
 
-import { Play, Film, Music, Activity, ArrowRight } from "lucide-react";
+import { Film, Music, Activity, ArrowRight } from "lucide-react";
 
 export default function ProcessSection() {
   return (
@@ -31,26 +31,17 @@ export default function ProcessSection() {
             {/* Tilted Phone Frame (-rotate-3) */}
             <div className="w-56 sm:w-64 lg:w-72 bg-black rounded-[2rem] p-2 shadow-xl shadow-stone-900/10  -rotate-3 hover:rotate-0 transition-transform duration-500">
               <div className="relative aspect-[9/16] rounded-[1.8rem] overflow-hidden bg-stone-900">
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
-                  alt="Raw Footage Creator"
-                  className="w-full h-full object-cover grayscale-[20%] brightness-95"
+                <iframe
+                  loading="lazy"
+                  title="Raw footage video player"
+                  src="https://play.gumlet.io/embed/6ac7cc935990b730fc3f0a2e"
+                  className="absolute inset-0 h-full w-full border-0"
+                  referrerPolicy="origin"
+                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+                  allowFullScreen
                 />
                 {/* Dynamic Island / Notch */}
                 <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 sm:w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 border border-white/10 shadow-sm pointer-events-none"></div>
-
-                {/* Bottom Video Controls Overlay */}
-                <div className="absolute bottom-3 left-3 right-3 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-2 rounded-xl text-white">
-                  <div className="flex items-center gap-2 text-xs">
-                    <Play className="w-3 h-3 fill-white" />
-                    <div className="flex-1 h-1 bg-white/40 rounded-full overflow-hidden">
-                      <div className="w-1/3 h-full bg-white rounded-full" />
-                    </div>
-                    <span className="text-[9px] sm:text-[10px] font-mono opacity-90">
-                      0:00 / 0:28
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -98,27 +89,27 @@ export default function ProcessSection() {
               {/* Track 1: Video Thumbnail Strip */}
               <div className="grid grid-cols-5 gap-0.5 mb-2.5 rounded-md overflow-hidden  ">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
-                  className="h-9 w-full object-cover rounded-md"
+                  src="process1.webp"
+                  className="h-9 w-full object-cover object-center rounded-md"
                   alt="Thumb 1"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80"
+                  src="process2.webp"
                   className="h-9 w-full object-cover rounded-md"
                   alt="Thumb 2"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80"
+                  src="process3.webp"
                   className="h-9 w-full object-cover rounded-md"
                   alt="Thumb 3"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+                  src="process4.webp"
                   className="h-9 w-full object-cover rounded-md"
                   alt="Thumb 4"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80"
+                  src="process5.webp"
                   className="h-9 w-full object-cover rounded-md"
                   alt="Thumb 5"
                 />
@@ -200,26 +191,17 @@ export default function ProcessSection() {
             {/* Tilted Phone Frame with Gold Border (rotate-3) */}
             <div className="w-56 sm:w-64 lg:w-72 bg-black rounded-[2rem] p-2 shadow-xl shadow-amber-900/10  rotate-3 hover:rotate-0 transition-transform duration-500">
               <div className="relative aspect-[9/16] rounded-[1.8rem] overflow-hidden bg-stone-900">
-                <img
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80"
-                  alt="Final LBB Edit Creator"
-                  className="w-full h-full object-cover contrast-[105%] saturate-[110%]"
+                <iframe
+                  loading="lazy"
+                  title="Final LBB edit video player"
+                  src="https://play.gumlet.io/embed/6ac7cc9c5990b730fc3f0a3f"
+                  className="absolute inset-0 h-full w-full border-0"
+                  referrerPolicy="origin"
+                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+                  allowFullScreen
                 />
                 {/* Dynamic Island / Notch */}
                 <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-20 sm:w-22 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2 border border-white/10 shadow-sm pointer-events-none"></div>
-
-                {/* Bottom Video Controls Overlay */}
-                <div className="absolute bottom-3 left-3 right-3 z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-2 rounded-xl text-white">
-                  <div className="flex items-center gap-2 text-xs">
-                    <Play className="w-3 h-3 fill-white" />
-                    <div className="flex-1 h-1 bg-white/40 rounded-full overflow-hidden">
-                      <div className="w-full h-full bg-[#FCE5B4] rounded-full" />
-                    </div>
-                    <span className="text-[9px] sm:text-[10px] font-mono opacity-90">
-                      0:00 / 0:28
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
