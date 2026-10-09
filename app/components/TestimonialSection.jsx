@@ -66,10 +66,7 @@ const testimonials = {
         id: "podcast-1",
         src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d4619",
       },
-      {
-        id: "youtube-1",
-        src: "https://play.gumlet.io/embed/6ac3e142d00ed21e8bc3bf91",
-      },
+    
     ],
   },
 };
