@@ -87,22 +87,22 @@ export default function Hero() {
             <div className="flex -space-x-2.5 overflow-hidden p-0.5">
               <img
                 className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-[#FAF7F2] object-cover shrink-0"
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                src="lua.jpg"
                 alt="Client avatar 1"
               />
               <img
                 className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-[#FAF7F2] object-cover shrink-0"
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                src="jason.jpg"
                 alt="Client avatar 2"
               />
               <img
-                className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-[#FAF7F2] object-cover shrink-0"
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
-                alt="Client avatar 3"
+                className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-[#FAF7F2] object-cover shrink-0 "
+                src="mohan.jpg"
+                alt="Client avatar 3 "
               />
               <img
                 className="inline-block h-9 w-9 sm:h-10 sm:w-10 rounded-full ring-2 ring-[#FAF7F2] object-cover shrink-0"
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+                src="review7.png"
                 alt="Client avatar 4"
               />
             </div>
