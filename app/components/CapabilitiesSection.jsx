@@ -61,18 +61,26 @@ export default function CapabilitiesSection() {
       id: "ai-work",
       title: "AI-Assisted Video Work",
       pills: [
-        { label: "AI-assisted workflows", bg: "bg-[#E9D5FF] text-[#581C87]" },
         {
-          label: "Script-to-video requirements",
+          label: "AI Video Strategy & Production",
+          bg: "bg-[#E9D5FF] text-[#581C87]",
+        },
+        {
+          label: "Hyper-Realistic AI UGC Ads",
           bg: "bg-[#CFFAFE] text-[#0891B2]",
         },
         {
-          label: "High-volume repetitive formats",
+          label: "Bulk Production in 48 Hours",
           bg: "bg-[#FFEDD5] text-[#9A3412]",
         },
         {
-          label: "Suitable AI-based video production",
+          label: "100% White Labelled",
           bg: "bg-[#DCFCE7] text-[#166534]",
+        },
+        {
+          label:
+            "For Performance Marketers & D2C founders who needs Quick Ai UGC Ads",
+          bg: "bg-[#FEF3C7] text-[#92400E]",
         },
       ],
       badgeText: "AI-Assisted",
@@ -87,7 +95,7 @@ export default function CapabilitiesSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Main Section Headline */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl max-w-3xl font-semibold text-[#2D231E] tracking-tight leading-[1.1] sm:leading-[1.08] mb-12 mx-auto font-heading">
-          What Can We <span className="text-[#C2410C]">  Handle for You? </span>
+          What Can We <span className="text-[#C2410C]"> Handle for You? </span>
         </h2>
 
         {/* 2-Card Per Row Grid */}
@@ -123,8 +131,7 @@ export default function CapabilitiesSection() {
 
         {/* Text below all cards */}
         <div className="max-w-4xl mx-auto mb-10 p-4 sm:p-6 bg-[#F5EFE6] text-[#FAF7F2] rounded-xl flex items-center justify-center gap-3.5   ">
-           
-            <h3 className="text-lg sm:text-xl   font-semibold font-heading  text-[#2D231E]">
+          <h3 className="text-lg sm:text-xl   font-semibold font-heading  text-[#2D231E]">
             AI where it improves speed. Human quality control stays in the loop.
           </h3>
         </div>
