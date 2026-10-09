@@ -30,20 +30,20 @@ const MARQUEE_VIDEOS = [
 ];
 
 export default function VideoMarquee() {
-  // Triplicated array for seamless infinite scrolling
-  const items = [...MARQUEE_VIDEOS, ...MARQUEE_VIDEOS, ...MARQUEE_VIDEOS];
+  // Triplicated array for seamless desktop infinite scrolling
+  const desktopItems = [...MARQUEE_VIDEOS, ...MARQUEE_VIDEOS, ...MARQUEE_VIDEOS];
 
   return (
-    <div className="w-full relative py-6 overflow-x-auto sm:overflow-hidden select-none touch-pan-x scrollbar-none">
+    <div className="w-full relative py-6 overflow-hidden select-none">
       {/* Background Soft Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[250px] bg-amber-900/5 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Continuous Marquee Track */}
-      <div className="flex w-max items-center animate-video-marquee">
-        {items.map((item, index) => (
+      {/* MOBILE VIEW: Native touch swipe cards with scroll snapping (Zero lag, zero animation glitches, smooth video tap/play) */}
+      <div className="flex sm:hidden overflow-x-auto snap-x snap-mandatory scrollbar-none px-4 gap-3 py-2">
+        {MARQUEE_VIDEOS.map((item) => (
           <div
-            key={`${item.id}-${index}`}
-            className="relative mx-1 w-[165px] h-[285px] sm:w-[210px] sm:h-[360px] rounded-2xl overflow-hidden shrink-0"
+            key={`mobile-${item.id}`}
+            className="relative h-[340px] aspect-[9/16] rounded-xl overflow-hidden shrink-0 snap-center border border-amber-950/10"
           >
             <iframe
               src={item.src}
@@ -52,7 +52,27 @@ export default function VideoMarquee() {
               referrerPolicy="origin"
               allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
               allowFullScreen
-              className="absolute inset-0 h-full w-full border-0"
+              className="absolute inset-0 h-full w-full border-0 scale-[1.05] origin-center"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* DESKTOP VIEW: Continuous auto-scrolling marquee */}
+      <div className="hidden sm:flex w-max items-center animate-video-marquee">
+        {desktopItems.map((item, index) => (
+          <div
+            key={`desktop-${item.id}-${index}`}
+            className="relative mx-1.5 h-[360px] aspect-[9/16] rounded-xl overflow-hidden shrink-0"
+          >
+            <iframe
+              src={item.src}
+              title={`Gumlet video player ${item.id}`}
+              loading="lazy"
+              referrerPolicy="origin"
+              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full border-0 scale-[1.05] origin-center"
             />
           </div>
         ))}
@@ -62,14 +82,16 @@ export default function VideoMarquee() {
       <style jsx>{`
         @keyframes videoMarquee {
           0% {
-            transform: translateX(0%);
+            transform: translate3d(0%, 0, 0);
           }
           100% {
-            transform: translateX(-33.333%);
+            transform: translate3d(-33.333%, 0, 0);
           }
         }
         .animate-video-marquee {
           animation: videoMarquee 35s linear infinite;
+          will-change: transform;
+          -webkit-backface-visibility: hidden;
         }
         .animate-video-marquee:hover,
         .animate-video-marquee:active,
