@@ -1,45 +1,55 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight, CheckCircle2, Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
     quote:
-      "LBB made editing feel like a dependable backend process instead of another creative bottleneck we had to manage every week.",
-    name: "Agency Founder",
-    role: "Recurring short-form content",
+      "I dedicate my incredible growth entirely to the team at Let's Build Brand. When we started 4 months ago, I was at 10k followers; today, I'm at 550k. This would have been impossible without their expert strategy and their amazing video editing team.",
+    name: "Stephanie",
+    role: "Influencer",
     initials: "AF",
+    avatar: "/review1.png",
     date: "09/30/2024",
     avatarBg: "bg-[#2D231E]",
     result: "More videos delivered with less coordination",
   },
   {
     quote:
-      "The biggest win was consistency. We could send raw recordings, get clean edits back, and keep publishing without rebuilding the workflow each time.",
-    name: "Content Lead",
-    role: "Podcast and clips workflow",
+      " It's rare to find a creative team that truly listens and executes with such precision. They took my vision for my Taekwon-Do content and captured the energy and discipline of the art form in every edit. The final videos were exactly my dream style, only better.",
+    name: "Johann De Silva",
+    role: "Martial Arts Instructor",
     initials: "CL",
+    avatar: "/review2.png",
     date: "10/12/2024",
     avatarBg: "bg-[#7A5B3E]",
     result: "Cleaner delivery rhythm across formats",
   },
   {
     quote:
-      "We needed a team that understood revisions, quality checks, and deadlines. LBB fit into the process quickly and kept things moving.",
-    name: "Creative Operator",
-    role: "High-volume editing support",
+      "We gave them an incredibly demanding project: 60 videos in just 10 days. Not only did they deliver on time, but the quality was exceptional. Their systematic process, which included three rounds of quality checks, ensured every video was perfect.",
+    name: "Innerlink",
+    role: "Agency Partner",
     initials: "CO",
+    avatar: "/review3.png",
     date: "11/04/2024",
     avatarBg: "bg-[#C2410C]",
     result: "Reliable support during busy production weeks",
   },
 ];
 
-const proofPoints = [
-  "Simple handoff",
-  "Human quality control",
-  "Revision-friendly",
-  "Built for repeat work",
+const videoTestimonials = [
+  {
+    id: "video-testimonial-1",
+    title: "Video testimonial 1",
+    src: "https://play.gumlet.io/embed/6ac7ce57b7a0f1b153b6c9cb",
+  },
+  {
+    id: "video-testimonial-2",
+    title: "Video testimonial 2",
+    src: "https://play.gumlet.io/embed/6ac7cd665990b730fc3f0b33",
+  },
 ];
 
 export default function ClientTestimonialsSection() {
@@ -50,10 +60,7 @@ export default function ClientTestimonialsSection() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-10 max-w-3xl text-center md:mb-12">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#F5EFE6] px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-[#8C4A22]">
-            <Star className="h-4 w-4 fill-[#F97316] text-[#F97316]" />
-            Client Feedback
-          </span>
+       
           <h2 className="mx-auto max-w-3xl text-3xl font-semibold leading-[1.1] tracking-tight text-[#2D231E] sm:text-4xl md:text-5xl sm:leading-[1.08] font-heading">
             What It Feels Like When{" "}
             <span className="text-[#C2410C]">
@@ -70,10 +77,14 @@ export default function ClientTestimonialsSection() {
             >
               <div className="mb-8 flex items-center justify-between gap-4">
                 <div className="flex min-w-0 items-center gap-3.5">
-                  <div
-                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${item.avatarBg} text-sm font-extrabold text-white`}
-                  >
-                    {item.initials}
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#F5EFE6]">
+                    <Image
+                      src={item.avatar}
+                      alt={`${item.name} avatar`}
+                      fill
+                      sizes="48px"
+                      className="object-cover scale-155"
+                    />
                   </div>
                   <div className="min-w-0">
                     <h3 className="truncate text-base font-bold leading-tight text-[#2D231E] sm:text-lg font-heading">
@@ -105,6 +116,27 @@ export default function ClientTestimonialsSection() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-5">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            {videoTestimonials.map((item) => (
+              <div
+                key={item.id}
+                className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-[#FFFDF9]"
+              >
+                <iframe
+                  loading="lazy"
+                  title={item.title}
+                  src={item.src}
+                  className="absolute inset-0 h-full w-full border-0"
+                  referrerPolicy="origin"
+                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"
+                  allowFullScreen
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 flex justify-center">
