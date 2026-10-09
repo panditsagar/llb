@@ -50,6 +50,11 @@ const videoTestimonials = [
     title: "Video testimonial 2",
     src: "https://play.gumlet.io/embed/6ac7cd665990b730fc3f0b33",
   },
+   {
+    id: "video-testimonial-3",
+    title: "Video testimonial 3",
+    src: "https://play.gumlet.io/embed/6ac3e142d00ed21e8bc3bf91",
+  },
 ];
 
 export default function ClientTestimonialsSection() {
@@ -119,7 +124,7 @@ export default function ClientTestimonialsSection() {
         </div>
 
         <div className="mt-5">
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {videoTestimonials.map((item) => (
               <div
                 key={item.id}

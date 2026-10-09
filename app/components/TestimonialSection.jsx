@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const testimonials = {
-  "Talking Head": {
+  "Short Form Video": {
     type: "vertical",
     videos: [
       {
@@ -18,24 +18,15 @@ const testimonials = {
         id: "talking-head-3",
         src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d461a",
       },
-    ],
-  },
-  Podcast: {
-    type: "landscape",
-    videos: [
+
       {
-        id: "podcast-1",
-        src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d4619",
+        id: "reels-2",
+        src: "https://play.gumlet.io/embed/6ac3e142d00ed21e8bc3bf92",
       },
       {
-        id: "podcast-2",
-        src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b006",
+        id: "reels-3",
+        src: "https://play.gumlet.io/embed/6ac3e1425599ef1e51a8ff97",
       },
-    ],
-  },
-  UGC: {
-    type: "vertical",
-    videos: [
       {
         id: "ugc-1",
         src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b004",
@@ -50,9 +41,13 @@ const testimonials = {
       },
     ],
   },
-  "Product Video": {
+  " Long form Video  ": {
     type: "landscape",
     videos: [
+      {
+        id: "podcast-2",
+        src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b006",
+      },
       {
         id: "product-video-1",
         src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b005",
@@ -61,40 +56,18 @@ const testimonials = {
         id: "product-video-2",
         src: "https://play.gumlet.io/embed/6ac3e142bbfc8c057081836f",
       },
-    ],
-  },
-  "Motion Graphics": {
-    type: "landscape",
-    videos: [
+
       {
         id: "motion-graphics-1",
         src: "https://play.gumlet.io/embed/6ac3e1425599ef1e51a8ff96",
       },
-    ],
-  },
-  YouTube: {
-    type: "landscape",
-    videos: [
+      {
+        id: "podcast-1",
+        src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d4619",
+      },
       {
         id: "youtube-1",
         src: "https://play.gumlet.io/embed/6ac3e142d00ed21e8bc3bf91",
-      },
-    ],
-  },
-  Reels: {
-    type: "vertical",
-    videos: [
-      {
-        id: "reels-1",
-        src: "https://play.gumlet.io/embed/6ac34f6fbbfc8c05707d4618",
-      },
-      {
-        id: "reels-2",
-        src: "https://play.gumlet.io/embed/6ac3e142d00ed21e8bc3bf92",
-      },
-      {
-        id: "reels-3",
-        src: "https://play.gumlet.io/embed/6ac3e1425599ef1e51a8ff97",
       },
     ],
   },
@@ -103,11 +76,11 @@ const testimonials = {
 const categories = Object.keys(testimonials);
 
 export default function TestimonialSection() {
-  const [activeTab, setActiveTab] = useState("Talking Head");
+  const [activeTab, setActiveTab] = useState("Short Form Video");
 
   const currentCategoryData =
-    testimonials[activeTab] || testimonials["Talking Head"];
-  const isVerticalCategory = currentCategoryData.type === "vertical";
+    testimonials[activeTab] || testimonials["Short Form Video "];
+  const isVerticalCategory = currentCategoryData?.type === "vertical";
 
   return (
     <section className="relative overflow-hidden bg-[#FAF7F2] text-[#2D231E] pb-16">
@@ -141,7 +114,7 @@ export default function TestimonialSection() {
         </div>
 
         <div className="flex flex-wrap gap-3 mx-auto mb-12 items-center justify-center">
-          {currentCategoryData.videos.map((item) => (
+          {currentCategoryData?.videos.map((item) => (
             <div
               key={item.id}
               className={`group relative rounded-xl overflow-hidden shadow-lg shadow-stone-900/10 hover:shadow-2xl transition-all duration-300 w-full ${
