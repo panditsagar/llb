@@ -6,6 +6,10 @@ const testimonials = {
   "Short Form Video": {
     type: "vertical",
     videos: [
+       {
+        id: "reels-3",
+        src: "https://play.gumlet.io/embed/6ac3e1425599ef1e51a8ff97",
+      },
       {
         id: "talking-head-1",
         src: "https://play.gumlet.io/embed/6ac34f6fd00ed21e8bbfa726",
@@ -23,10 +27,7 @@ const testimonials = {
         id: "reels-2",
         src: "https://play.gumlet.io/embed/6ac3e142d00ed21e8bc3bf92",
       },
-      {
-        id: "reels-3",
-        src: "https://play.gumlet.io/embed/6ac3e1425599ef1e51a8ff97",
-      },
+     
       {
         id: "ugc-1",
         src: "https://play.gumlet.io/embed/6ac34f6f5599ef1e51a4b004",
@@ -41,7 +42,7 @@ const testimonials = {
       },
     ],
   },
-  " Long form Video  ": {
+  "Long form Video": {
     type: "landscape",
     videos: [
       {
@@ -113,14 +114,20 @@ export default function TestimonialSection() {
           })}
         </div>
 
-        <div className="flex flex-wrap gap-3 mx-auto mb-12 items-center justify-center">
+        <div
+          className={`flex gap-3 mx-auto mb-12 items-center ${
+            isVerticalCategory
+              ? "justify-start sm:justify-center overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none pb-4 sm:pb-0 -mx-4 px-4 sm:mx-auto sm:px-0 sm:flex-wrap"
+              : "justify-center flex-wrap"
+          }`}
+        >
           {currentCategoryData?.videos.map((item) => (
             <div
               key={item.id}
-              className={`group relative rounded-xl overflow-hidden shadow-lg shadow-stone-900/10 hover:shadow-2xl transition-all duration-300 w-full ${
+              className={`group relative shrink-0 snap-center rounded-xl overflow-hidden shadow-lg shadow-stone-900/10 hover:shadow-2xl transition-all duration-300 ${
                 isVerticalCategory
-                  ? "aspect-[9/16] sm:w-[calc(50%-0.375rem)] lg:w-[calc(25%-0.5625rem)] max-w-[240px]"
-                  : "aspect-[16/9] sm:w-[calc(50%-0.375rem)] lg:w-[calc(33.333%-0.5rem)] max-w-[380px]"
+                  ? "aspect-[9/16] w-[68vw] max-w-[240px] sm:w-[calc(50%-0.375rem)] lg:w-[calc(25%-0.5625rem)]"
+                  : "aspect-[16/9] w-full max-w-[380px] sm:w-[calc(50%-0.375rem)] lg:w-[calc(33.333%-0.5rem)]"
               }`}
             >
               <iframe
