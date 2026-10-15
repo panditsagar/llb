@@ -61,28 +61,28 @@ export default function WorkflowSection() {
           Does LBB Fit Into <span className="text-[#C2410C]">  Your Workflow? </span>
         </h2>
 
-        {/* 6 Workflow Cards Grid (2 cards per row) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12">
+        {/* Workflow cards: one column on smaller screens, two on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 md:max-lg:grid-cols-1 gap-6 text-left mb-12">
           {workflows.map((item, idx) => (
             <div
               key={idx}
               className={`relative overflow-hidden p-6 sm:p-8 ${item.cardBg} rounded-xl flex flex-col justify-between min-h-[190px] sm:min-h-[210px]`}
             >
               {/* Left Text Content */}
-              <div className="relative z-10 pr-20 sm:pr-32 md:pr-36">
+              <div className="relative z-10 pr-20 sm:pr-32 md:pr-36 max-sm:pr-0 sm:max-lg:pr-44">
                 <h3 className="text-xl sm:text-2xl font-bold text-[#2D231E] font-heading mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm sm:text-base text-[#574940]  ">
+                <p className="text-sm sm:text-base text-[#574940] font-medium  ">
                   {item.description}
                 </p>
               </div>
 
-              {/* Right Background Image - Bottom Aligned */}
+              {/* Artwork sits below the copy on phones and beside it on larger screens */}
               <img
                 src={item.image}
                 alt={item.title}
-                className="absolute right-2 sm:right-4 bottom-0 w-28 sm:w-36 md:w-44 h-auto max-h-[90%] sm:max-h-[95%] object-contain object-bottom pointer-events-none z-0 opacity-90"
+                className="absolute right-2 sm:right-4 bottom-0 w-28 sm:w-36 md:w-44 h-auto max-h-[90%] sm:max-h-[95%] object-contain object-bottom pointer-events-none z-0 opacity-90 max-sm:static max-sm:self-end max-sm:mt-4 max-sm:-mb-6 max-sm:-mr-4 max-sm:h-32 max-sm:w-auto max-sm:max-w-full max-sm:max-h-none md:max-lg:w-36"
               />
             </div>
           ))}
@@ -93,7 +93,7 @@ export default function WorkflowSection() {
           <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#f97316]/55 flex sm:inline-flex items-center justify-center">
             <a
               href="#book-call"
-              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px] relative inline-flex items-center justify-center px-10 sm:px-20 py-4 text-base sm:text-lg font-bold rounded-full text-white gradient-brand shadow-lg shadow-orange-900/20 hover:brightness-105 transition-all"
+              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px] relative inline-flex items-center justify-center px-10 sm:px-20 py-4 text-base sm:text-lg font-bold rounded-full text-white gradient-brand shadow-lg shadow-orange-900/20 hover:brightness-105 transition-all max-sm:min-w-0 max-sm:px-6"
             >
               <span>Book 10 min Call</span>
               <ArrowRight className="w-5 h-5 ml-2.5" />
