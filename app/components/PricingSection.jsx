@@ -1,13 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
-import {
-  Sparkles,
-  ArrowRight,
-  DollarSign,
-  CheckCircle2,
-  Layers,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 export default function PricingSection() {
   const requirementFactors = [
@@ -55,38 +46,26 @@ export default function PricingSection() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Main Section Headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+        <h2
           className="text-3xl sm:text-4xl md:text-5xl  font-semibold text-[#2D231E] tracking-tight leading-[1.1] mb-6 mx-auto font-heading"
         >
           Video Editing Starts From{" "}
           <span className="bg-[#FF5B24] text-[#ffffff] px-2 sm:px-2.5 py-0.5 rounded-lg inline-block">
             $15/Video.
           </span>
-        </motion.h2>
+        </h2>
 
         {/* Subheadline Highlight Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+        <div
           className="max-w-2xl mx-auto mb-12   text-[#5E5047]  flex items-center justify-center gap-3  "
         >
           <p className="text-base sm:text-lg md:text-xl font-bold leading-relaxed text-center sm:text-left">
             Recurring editing works best from 12+ videos/month.
           </p>
-        </motion.div>
+        </div>
 
         {/* Main Pricing Factors Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 40, scale: 0.97 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+        <div
           className="bg-[#FFFDF9] rounded-xl p-6 sm:p-10 text-left mb-12 relative overflow-hidden"
         >
           <div className="flex items-center gap-3 mb-5">
@@ -98,25 +77,19 @@ export default function PricingSection() {
           {/* Requirement Factors Pill Tags Wrap (Tight Gap + Cool Random Offsets) */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-1 pb-1">
             {requirementFactors.map((factor, idx) => (
-              <motion.span
+              <span
                 key={idx}
-                whileHover={{ scale: 1.08, rotate: 0, zIndex: 20 }}
-                transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                className={`px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-full text-xs sm:text-sm md:text-base font-extrabold tracking-wider ${factor.bg} ${factor.transform} transition-all inline-flex items-center gap-1.5 cursor-pointer origin-center relative`}
+                className={`px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-full text-xs sm:text-sm md:text-base font-extrabold tracking-wider ${factor.bg} ${factor.transform} inline-flex items-center gap-1.5 origin-center relative`}
               >
                 <CheckCircle2 className="w-4 h-4 opacity-70 shrink-0" />
                 {factor.label}
-              </motion.span>
+              </span>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Pre-CTA Text Block (No Card Container) */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.35 }}
+        <div
           className="max-w-3xl mx-auto text-center mb-10 px-4 space-y-5"
         >
           {/* Badge Tag */}
@@ -148,14 +121,10 @@ export default function PricingSection() {
               for your current workflow.
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Global Bottom CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+        <div
           className="flex flex-col items-center"
         >
           <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#f97316]/55 flex sm:inline-flex items-center justify-center">
@@ -167,7 +136,7 @@ export default function PricingSection() {
               <ArrowRight className="w-5 h-5 ml-2.5" />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

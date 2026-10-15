@@ -19,15 +19,20 @@ export default function ClientLogoStrip() {
         </p>
 
         {/* Client Logos Strip */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8   ">
-          {clientLogos.map((logo, idx) => (
-            <img
-              key={idx}
-              src={logo.src}
-              alt={logo.alt}
-              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
-            />
+        <div className="grid grid-cols-3 items-center gap-x-5 gap-y-6 sm:grid-cols-6 sm:gap-x-6 lg:grid-cols-[repeat(6,minmax(0,1fr))_auto]">
+          {clientLogos.map((logo) => (
+            <div key={logo.src} className="flex h-12 min-w-0 items-center justify-center sm:h-14 lg:h-16">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="h-auto max-h-10 w-auto max-w-full object-contain opacity-80 transition-opacity duration-300 hover:opacity-100 sm:max-h-12 lg:max-h-14"
+              />
+            </div>
           ))}
+          <span className="col-span-3 inline-flex items-center justify-center gap-2 justify-self-center whitespace-nowrap rounded-full   border-[#E5D9CB] bg-[#FFFFFF]/80 px-5 py-2.5 sm:col-span-6 lg:col-span-1">
+            <span className="text-2xl font-bold tracking-tight text-[#C2410C]">70+</span>
+            <span className="text-md font-medium text-[#78695F]">more</span>
+          </span>
         </div>
       </div>
     </div>

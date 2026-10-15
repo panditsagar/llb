@@ -141,7 +141,7 @@ export default function RepeatableWorkflowSection() {
                       x: 0,
                       scale: 1,
                     }}
-                    viewport={{ once: false, amount: 0.3 }}
+                    viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     className={`w-full md:w-[62%] ${step.cardBg} rounded-xl p-5 sm:p-7 relative overflow-hidden flex items-start gap-4 sm:gap-6 z-10`}
                   >

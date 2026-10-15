@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 export default function FaqSection() {
@@ -81,15 +80,11 @@ export default function FaqSection() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Section Headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5 }}
+        <h2
           className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#2D231E] text-center tracking-tight leading-[1.15] mb-12 sm:mb-16 font-heading"
         >
           Everything You Need to Know
-        </motion.h2>
+        </h2>
 
         {/* FAQ List */}
         <div className="space-y-4  mb-10 ">
@@ -98,16 +93,12 @@ export default function FaqSection() {
 
             return (
               <div key={faq.id} className="space-y-4">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.2 }}
-                  transition={{ duration: 0.4, delay: idx * 0.03 }}
+                <div
                   className={`bg-[#FFFDF9] rounded-xl   ${
                     isOpen
                       ? "border-[#36281E]/40 shadow-xs"
                       : "border-[#E5DDD0] hover:border-[#C8BDB0]"
-                  } transition-all overflow-hidden`}
+                  } overflow-hidden`}
                 >
                   <button
                     onClick={() => toggleFaq(idx)}
@@ -118,7 +109,7 @@ export default function FaqSection() {
                       {faq.question}
                     </span>
                     <span
-                      className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                      className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
                         isOpen
                           ? "bg-[#C2410C] text-[#FAF7F2] rotate-180"
                           : "bg-[#EFE7DC] text-[#36281E]"
@@ -128,43 +119,30 @@ export default function FaqSection() {
                     </span>
                   </button>
 
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                      >
-                        <div className="px-5 sm:px-6 pb-6  text-base text-[#5E5047] leading-relaxed  ">
-                          <p>{faq.answer}</p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
+                  {isOpen && (
+                    <div className="px-5 sm:px-6 pb-6  text-base text-[#5E5047] leading-relaxed  ">
+                      <p>{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
               </div>
             );
           })}
         </div>
         {/* Global Bottom CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+        <div
           className="flex flex-col items-center"
         >
           <div className="w-full sm:w-auto p-1.5 rounded-full border-2 border-dotted border-[#f97316]/55 flex sm:inline-flex items-center justify-center">
             <a
               href="#book-call"
-              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px]  relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-white gradient-brand hover:brightness-105 transition-all shadow-lg shadow-orange-900/20"
+              className="w-full sm:w-auto min-w-[260px] sm:min-w-[360px]  relative inline-flex items-center justify-center px-8 sm:px-12 py-3.5 text-base sm:text-lg font-bold rounded-full text-white gradient-brand hover:brightness-105 shadow-lg shadow-orange-900/20"
             >
               <span>Book 10 min Call</span>
               <ArrowRight className="w-5 h-5 ml-2.5" />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
